@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Stock Management</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Custom styles for this template -->
+     <link href="/src/css/sticky-footer-navbar.css" rel="stylesheet">
+     <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+
+
+  <body>
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #015794;">
+          <span class="navbar-brand"> Stock Management </span>
+      </nav>
+    </header>
+
+    <div class="container">
+
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Products</th>
+          <th>Items</th>
+          <th>Average Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PRODUCT 1</td>
+          <td id="P1-item">35</td>
+          <td id="P1-price">12.5</td>
+        </tr>
+        <tr>
+          <td>PRODUCT 2</td>
+          <td id="P2-item">35</td>
+          <td id="P2-price">12.5</td>
+        </tr>
+        <tr>
+          <td>PRODUCT 3</td>
+          <td id="P3-item">35</td>
+          <td id="P3-price">12.5</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+   <!-- ADD Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  ADD ITEMS
+</button>
+
+
+  <!-- REMOVE Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal1">
+  REMOVE ITEMS
+</button>
+</div>
+<!-- Add Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Add Stock</h3>
+
+        <div class="form-group">
+          <label for="product_select">Select a product</label>
+          <select class="form-control" name="product_select" id="product_select">
+            <option selected="true" >--Select--</option>
+            <option>Product1 </option>
+            <option>Product 2</option>
+            <option>Product 3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="items_textbox">Items recieved</label>
+          <input type="text" class="form-control" name="items_textbox" id="items_textbox"  >
+        </div>
+
+        <div class="form-group">
+          <label for="price_per_item">Price for item</label>
+          <input type="text" name="price_per_item" id="price_per_item" class="form-control" >
+        </div>
+      </div>
+
+  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Remove MOdal 2 -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Add Stock</h3>
+
+        <div class="form-group">
+          <label for="remove_product">Select a product code</label>
+          <select class="form-control" name="remove_product" id="remove_product">
+            <option selected="true"  >--Select--</option>
+            <option>Product 1 </option>
+            <option>Product 2</option>
+            <option>Product 3</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="email_textbox">Buyer email address</label>
+          <input type="text" class="form-control" name="email_textbox" id="email_textbox"  >
+        </div>
+
+        <div class="form-group">
+          <label for="item_bought">Item bought</label>
+          <input type="text" name="item_bought" id="item_bought" class="form-control" >
+        </div>
+      </div>
+
+  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
+
